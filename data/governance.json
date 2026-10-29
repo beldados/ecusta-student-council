@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ecusta-constitution",
+    "title": "ECUSTA Student Council Constitution",
+    "subtitle": "Supreme Governing Charter of the Student Body",
+    "category": "Constitution",
+    "description": "Ratified constitutional framework defining student council governance, leadership mandates, election protocols, student rights, and institutional checks and balances.",
+    "fileUrl": "/documents/ECUSTA_Constitution.pdf",
+    "fileType": "PDF",
+    "fileSize": "1.4 MB",
+    "version": "Rev. 2026.1",
+    "effectiveDate": "Academic Year 2026/2027",
+    "ratifiedBy": "General Student Assembly & Council Executive"
+  },
+  {
+    "id": "student-handbook",
+    "title": "ECUSTA Medical Student Handbook",
+    "subtitle": "Academic Guidelines, Clinical Rotations & Student Welfare",
+    "category": "Handbook",
+    "description": "Comprehensive institutional reference guide containing preclinical curriculum guidelines, clinical ward etiquette, student rights, library regulations, and welfare procedures.",
+    "fileUrl": "/documents/Student_Handbook.pdf",
+    "fileType": "PDF",
+    "fileSize": "2.8 MB",
+    "version": "Edition 2026",
+    "effectiveDate": "Academic Year 2026/2027",
+    "ratifiedBy": "ECUSTA Academic Committee & Student Council"
+  }
+]

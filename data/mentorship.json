@@ -1,0 +1,268 @@
+{
+  "title": "ECUSTA Peer Mentorship Initiative",
+  "stats": "15 Mentors — 60 Mentees",
+  "currentCycle": "Academic Cycle 2026/2027",
+  "description": "Structured peer guidance bridging academic study strategies, foundational medical sciences, and campus integration.",
+  "mentors": [
+    {
+      "id": "amen-tilahun",
+      "name": "Amen Tilahun",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/amen-tilahun.jpg",
+      "quote": "A mentor lights the path; the student walks it.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "arsema-tariku",
+      "name": "Arsema Tariku",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/arsema-tariku.jpg",
+      "quote": "A good mentor sees the potential in you before you see it in yourself.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "basleal-bereket",
+      "name": "Basleal Bereket",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/basleal-bereket.jpg",
+      "quote": "A mentor doesn't just teach, they inspire you to be your best self.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "dibora",
+      "name": "Dibora",
+      "batch": "PC 2",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/dibora.jpg",
+      "quote": "A mentor empowers you to believe in yourself when you need it most.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "fenet-aboma",
+      "name": "Fenet Aboma",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/fenet-aboma.jpg",
+      "quote": "A mentor believes in you when you don't believe in yourself.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "hanna-semunigus",
+      "name": "Hanna Semunigus",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/hanna-semunigus.jpg",
+      "quote": "A great mentor doesn’t give you the path to follow; they help you discover the strength to create your own.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "lidetu-abera",
+      "name": "Lidetu Abera",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/lidetu-abera.jpg",
+      "quote": "The best mentors don't create followers—they create future leaders.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "natanim-amare",
+      "name": "Natanim Amare",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/natanim-amare.jpg",
+      "quote": "Progress over perfection.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "paulos-leul",
+      "name": "Paulos Leul",
+      "batch": "PC 2",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/paulos-leul.jpg",
+      "quote": "Surviving is winning!",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "3 times a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "sebrin-jemal",
+      "name": "Sebrin Jemal",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/sebrin-jemal.jpg",
+      "quote": "A mentor lights the path; the student walks it.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "selwa",
+      "name": "Selwa",
+      "batch": "PC 2",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/selwa.jpg",
+      "quote": "The best mentors don't create followers—they create future leaders.",
+      "availability": {
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "sifen-getachew",
+      "name": "Sifen Getachew",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/sifen-getachew.jpg",
+      "quote": "The best way to find yourself is to lose yourself in helping others succeed.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "tizita-atnafu",
+      "name": "Tizita Atnafu",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/tizita-atnafu.jpg",
+      "quote": "Learning is a journey best traveled together.",
+      "availability": {
+        "startTime": "09:00",
+        "endTime": "10:00",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "yanet-shemeles",
+      "name": "Yanet Shemeles",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/yanet-shemeles.jpg",
+      "quote": "Slowly is the way to get there fast.",
+      "availability": {
+        "startTime": "09:30",
+        "endTime": "10:30",
+        "frequency": "Twice a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    },
+    {
+      "id": "zemichael-biruk",
+      "name": "Zemichael Biruk",
+      "batch": "PC 1",
+      "menteeTarget": "ITM Students",
+      "image": "/images/mentors/zemichael-biruk.jpg",
+      "quote": "The best mentors don't create followers—they create future leaders.",
+      "availability": {
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "frequency": "Once a week"
+      },
+      "status": "Active",
+      "generation": "G1",
+      "cohortId": "G1"
+    }
+  ],
+  "cohorts": [
+    {
+      "id": "G1",
+      "name": "Generation 1 (PC ➔ ITM)",
+      "cycle": "Academic Cycle 2026/2027",
+      "mentorBatch": "PC 1 & PC 2",
+      "menteeTarget": "ITM Students",
+      "status": "Active",
+      "summary": "15 Pre-Clinical mentors guiding ITM students through foundational medical sciences."
+    },
+    {
+      "id": "G2",
+      "name": "Generation 2 (ITM ➔ Freshmen)",
+      "cycle": "Academic Cycle 2026/2027",
+      "mentorBatch": "ITM",
+      "menteeTarget": "Freshmen",
+      "status": "Recruiting",
+      "summary": "Generation 2 mentor applications opening soon for ITM students."
+    }
+  ]
+}

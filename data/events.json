@@ -1,0 +1,66 @@
+[
+  {
+    "id": "2026-05-alumni-panel",
+    "title": "Medical Alumni Career & Experience Panel",
+    "category": "Academic",
+    "date": "2026-05-08",
+    "time": "Afternoon Session",
+    "venue": "ECUSTA Study Hall",
+    "coverImage": "/images/events/2026-05-alumni-panel/cover.jpg",
+    "summary": "Panel discussion featuring five distinguished ECUSTA medical graduates sharing insights on navigating medical school and clinical training.",
+    "description": "On Friday, May 8, 2026, the ECUSTA Student Council hosted a panel discussion at the ECUSTA Study Hall. The event featured five high-achieving medical graduates from our institution: Dr. Eyobel Tassel, Dr. Alpha Tarekegn, Dr. Bruk Kifle, Dr. Mihret Agmas, and Dr. Bisrat Getachew, who shared their valuable insights and experiences regarding the various aspects and behind-the-scenes realities of navigating medical school.",
+    "gallery": [
+      "/images/events/2026-05-alumni-panel/photo-2.jpg",
+      "/images/events/2026-05-alumni-panel/photo-3.jpg"
+    ],
+    "organizer": "ECUSTA Student Council",
+    "speakers": [
+      "Dr. Eyobel Tassel",
+      "Dr. Alpha Tarekegn",
+      "Dr. Bruk Kifle",
+      "Dr. Mihret Agmas",
+      "Dr. Bisrat Getachew"
+    ]
+  },
+  {
+    "id": "2026-07-itm-orientation",
+    "title": "ITM Transition & Academic Resource Orientation",
+    "category": "Academic",
+    "date": "2026-07-22",
+    "time": "Morning Session",
+    "venue": "ECUSTA Campus",
+    "coverImage": "/images/events/2026-07-itm-orientation/cover.jpg",
+    "summary": "Comprehensive orientation for upcoming ITM students led by council leadership covering study strategies and resource navigation.",
+    "description": "On Wednesday, July 22, 2026, Student Council President Deborah Million, Secretary Natanim Amare, and the VP of Academics delivered an orientation presentation to upcoming ITM students. They highlighted the various challenges the new students will face and shared strategies on how to overcome them. Additionally, they provided comprehensive guides on accessing and utilizing key resources to help them successfully navigate the demands of life as medical students.",
+    "gallery": [
+      "/images/events/2026-07-itm-orientation/photo-2.jpg",
+      "/images/events/2026-07-itm-orientation/photo-3.jpg"
+    ],
+    "organizer": "President Deborah Million, Secretary Natanim Amare & VP of Academics",
+    "speakers": [
+      "Deborah Million (Council President)",
+      "Natanim Amare (Executive Secretary)",
+      "VP of Academics"
+    ]
+  },
+  {
+    "id": "2026-09-freshman-welcome",
+    "title": "Incoming Freshman Welcome & Campus Orientation",
+    "category": "Assembly",
+    "date": "2026-09-30",
+    "time": "Morning Session",
+    "venue": "ECUSTA Main Campus",
+    "coverImage": "/images/events/2026-09-freshman-welcome/cover.jpg",
+    "summary": "Welcoming session for incoming medical freshmen introducing campus life, medical school realities, and student community values.",
+    "description": "On Wednesday, September 30, 2026, Student Council President Deborah Million and Secretary Natanim Amare delivered a welcoming presentation to incoming freshman students. They shared key insights into the ECUSTA institution and the realities of medical school in a fun and engaging way. To close the session, they invited the new students to share their thoughts on the question: 'What does ECUSTA mean to you?'",
+    "gallery": [
+      "/images/events/2026-09-freshman-welcome/photo-2.jpg",
+      "/images/events/2026-09-freshman-welcome/photo-3.jpg"
+    ],
+    "organizer": "President Deborah Million & Secretary Natanim Amare",
+    "speakers": [
+      "Deborah Million (Council President)",
+      "Natanim Amare (Executive Secretary)"
+    ]
+  }
+]

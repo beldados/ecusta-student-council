@@ -1,0 +1,48 @@
+[
+  {
+    "id": "ecusta-atlas",
+    "title": "ECUSTA Atlas",
+    "category": "Tech & Automation",
+    "status": "Active",
+    "stats": "Campus Ecosystem & Community",
+    "image": "/images/initiatives/ecusta-atlas.jpg",
+    "summary": "The premier digital platform and student community at ECUSTA. Features the Atlas Bot for automated mentee-to-mentor matching, instant student registration, and unified campus updates.",
+    "lead": "Daniel Demerw (Beldados) & ECUSTA Student Council",
+    "actionUrl": "https://t.me/EcustaAtlas",
+    "actionLabel": "Launch Atlas Community",
+    "socials": {
+      "telegram": "https://t.me/EcustaAtlas",
+      "instagram": "https://www.instagram.com/ecusta.atlas"
+    }
+  },
+  {
+    "id": "council-mentorship",
+    "title": "Council Mentorship Initiative",
+    "category": "Academic",
+    "status": "Active",
+    "stats": "15 Mentors — 60 Mentees (G1)",
+    "image": "/images/initiatives/mentorship.jpg",
+    "summary": "Structured peer guidance bridging academic study strategies, foundational medical sciences, and campus life integration.",
+    "lead": "VP of Academics",
+    "actionUrl": "/mentorship",
+    "actionLabel": "Explore Mentors & Cohorts"
+  },
+  {
+    "id": "atlas-attendance",
+    "title": "Atlas Attendance System",
+    "category": "Tech & Automation",
+    "status": "In Development",
+    "stats": "Automated Check-in",
+    "summary": "Digital lecture and clinical ward session attendance tracking for students and council representatives.",
+    "lead": "Lead Developer & Devs Team"
+  },
+  {
+    "id": "first-aid",
+    "title": "Campus First Aid Training",
+    "category": "Health & Welfare",
+    "status": "Upcoming",
+    "stats": "Practical Skills Training",
+    "summary": "Emergency response, basic life support, and first-aid workshops for medical students.",
+    "lead": "VP of Dormitory & Welfare"
+  }
+]

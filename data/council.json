@@ -1,0 +1,133 @@
+[
+  {
+    "id": "daniel-demerw",
+    "name": "Daniel Demerw (Beldados)",
+    "role": "Lead Developer",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "PC1",
+    "image": "/images/council/daniel-demerw.jpg",
+    "bio": "PC1 medical student with a passion for philosophy, coding, and connecting ideas across disciplines. Passionate about institutional communication and builder culture.",
+    "email": "daniel.demerw@ecusta-hli.edu.et",
+    "telegram": "beldados",
+    "linkedin": "https://linkedin.com/in/daniel-demerw"
+  },
+  {
+    "id": "deborah-million",
+    "name": "Deborah Million",
+    "role": "President",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "Clinical Year I",
+    "image": "/images/council/deborah-million.jpg",
+    "bio": "A student of medicine and of life, continually seeking wisdom in knowing my Creator, finding expression in music and literature, and cherishing conversations that challenge the mind and nourish the soul. Above all, I remain a student of growth, embracing the person I am becoming.",
+    "email": "deborah.million251@ecusta-hli.edu.et",
+    "telegram": "Jehovah12345",
+    "linkedin": null
+  },
+  {
+    "id": "sifen-getachew",
+    "name": "Sifen Getachew",
+    "role": "Executive Vice President",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "PC 1",
+    "image": "/images/council/sifen-getachew.jpg",
+    "bio": "The best way to find yourself is to lose yourself in helping others succeed.",
+    "email": null,
+    "telegram": null,
+    "linkedin": null
+  },
+  {
+    "id": "natanim-amare",
+    "name": "Natanim Amare",
+    "role": "Executive Secretary",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "PC2",
+    "image": "/images/council/natanim-amare.jpg",
+    "bio": "Progress over perfection.",
+    "email": "natanim.amare296@ecusta-hli.edu.et",
+    "telegram": null,
+    "linkedin": null
+  },
+  {
+    "id": "basleal-bereket",
+    "name": "Basleal Bereket",
+    "role": "VP of Social Media",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "PC2",
+    "image": "/images/council/basleal-bereket.jpg",
+    "bio": "Silent moves, loud results.",
+    "email": "baslealbereket@gmail.com",
+    "telegram": "basleal1996",
+    "linkedin": null
+  },
+  {
+    "id": "lidetu-abera",
+    "name": "Lidetu Abera",
+    "role": "VP of Academics",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "PC 1",
+    "image": "/images/council/lidetu-abera.jpg",
+    "bio": "The best mentors don't create followers—they create future leaders.",
+    "email": null,
+    "telegram": null,
+    "linkedin": null
+  },
+  {
+    "id": "ruhamah-nathnael",
+    "name": "Ruhamah Nathnael",
+    "role": "C-II Batch Representative",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "C-II",
+    "image": "/images/council/ruhamah-nathnael.jpg",
+    "bio": "Fifth-year medical student dedicated to contributing to a better world.",
+    "email": "ruhamahnathnael@gmail.com",
+    "telegram": null,
+    "linkedin": null
+  },
+  {
+    "id": "mesula-wubliker",
+    "name": "Mesula Wubliker",
+    "role": "C-II Batch Representative",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "Clinical Year II",
+    "image": "/images/council/mesula-wubliker.jpg",
+    "bio": "I’m a medical student at ECUSTA HLI, currently serving as President of EMSA-ECUSTA. I enjoy exploring nature, I’m passionate about medicine and its art, and I’m drawn to leadership and being part of the solution. I value the work that happens beyond the spotlight. I believe in laying strong foundations and staying teachable through every season of life. After all, time and chance happen to them all.",
+    "quote": {
+      "text": "The race is not to the swift, nor the battle to the strong…",
+      "reference": "Ecclesiastes 9:11"
+    },
+    "leadership": [
+      {
+        "title": "President",
+        "organization": "EMSA-ECUSTA",
+        "period": "2026/27"
+      }
+    ],
+    "email": "mesuliker2@gmail.com",
+    "telegram": "Sliker_m",
+    "linkedin": null
+  },
+  {
+    "id": "minilik-adugna",
+    "name": "Minilik Adugna Jibriel",
+    "role": "Intern Representative",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "C2 (5th Year)",
+    "image": "/images/council/minilik-adugna.jpg",
+    "bio": "Representative of 2021 Medicine Department. Currently attaching at Alert Specialized Comprehensive Hospital.",
+    "email": "minilik.adugna137@ecusta-hli.edu.et",
+    "telegram": "minilik_aj",
+    "linkedin": null
+  },
+  {
+    "id": "nahum-admasu",
+    "name": "Nahum Admasu Yitagesu",
+    "role": "Medicine Department Representative",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "C2",
+    "image": "/images/council/nahum-admasu.jpg",
+    "bio": "Representative of the 2021 medicine department. Currently attaching at Alert Specialized Comprehensive Hospital. Member of the USMLE task force.",
+    "email": "nahum.admasu72@ecusta-hli.edu.et",
+    "telegram": "mahir_ady",
+    "linkedin": null
+  }
+]

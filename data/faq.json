@@ -1,0 +1,27 @@
+[
+  {
+    "id": "what-is-sc",
+    "question": "What is the ECUSTA Student Council?",
+    "answer": "The official student-led governing body representing medical students at the Ethiopian Catholic University of St. Thomas Aquinas (ECUSTA). We advocate for student welfare, organize academic peer mentorship, coordinate clinical hospital attachments, and represent student voices to university leadership."
+  },
+  {
+    "id": "how-to-join",
+    "question": "How can I join or get involved with the Council?",
+    "answer": "Executive cabinet positions and batch representatives are elected annually during general student assemblies. You can also get involved immediately by applying to become a peer mentor in our upcoming cohort cycles (like G2), joining our Devs team building digital tools like ECUSTA Atlas, or joining academic taskforces."
+  },
+  {
+    "id": "rules-constitution",
+    "question": "Where can I read the official rules and guidelines?",
+    "answer": "You can download the official ECUSTA Student Council Constitution and the Medical Student Handbook directly from our About page in PDF format. These documents outline student rights, academic guidelines, and council bylaws."
+  },
+  {
+    "id": "how-mentorship-works",
+    "question": "How does the Peer Mentorship program work?",
+    "answer": "The council organizes structured mentorship generations (currently Generation 1). Senior pre-clinical students (PC1 & PC2) are paired with ITM students for weekly guidance on anatomy, study strategies, and campus life. You can see all 15 active mentors and their available office hours on our Mentorship page."
+  },
+  {
+    "id": "anonymous-feedback",
+    "question": "Can I submit a concern or suggestion anonymously?",
+    "answer": "Yes. Our Contact page features a secure submission form with an 'Anonymous Submission' toggle. When enabled, your name and student ID are never collected, and your message is delivered directly to the Executive Secretary for assembly review."
+  }
+]

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --brand-navy: #1B2A4A;
+  --brand-midnight: #0F1B33;
+  --brand-gold: #D4AF37;
+  --brand-gold-hover: #C5A028;
+  --brand-crimson: #9B1B30;
+  --surface-dark: #121D33;
+  --surface-dark-border: #1E2D4D;
+  --surface-light: #FFFFFF;
+  --surface-light-bg: #FAF8F5;
+
+  --background: #FAF8F5;
+  --surface: #FFFFFF;
+  --surface-hover: #F2EFEB;
+  --border: #E2E8F0;
+  --brand: #1B2A4A;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  
+  --foreground: var(--text-primary);
+}
+
+.dark {
+  --brand-navy: #1B2A4A;
+  --brand-midnight: #0F1B33;
+  --brand-gold: #D4AF37;
+  --brand-gold-hover: #C5A028;
+  --brand-crimson: #9B1B30;
+  --surface-dark: #121D33;
+  --surface-dark-border: #1E2D4D;
+  --surface-light: #FFFFFF;
+  --surface-light-bg: #FAF8F5;
+
+  --background: #0F1B33;
+  --surface: #121D33;
+  --surface-hover: #1A2846;
+  --border: #1E2D4D;
+  --brand: #D4AF37;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  
+  --foreground: var(--text-primary);
+}
+
+@theme inline {
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-midnight: var(--brand-midnight);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-hover: var(--brand-gold-hover);
+  --color-brand-crimson: var(--brand-crimson);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-dark-border: var(--surface-dark-border);
+  --color-surface-light: var(--surface-light);
+  --color-surface-light-bg: var(--surface-light-bg);
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans), sans-serif;
+  --font-serif: var(--font-serif), Georgia, serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), sans-serif;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.05; transform: scaleY(0.98); }
+  50% { opacity: 0.14; transform: scaleY(1.02); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-slow {
+    animation: none;
+  }
+}
+

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "emsa-ecusta",
+    "name": "Ethiopian Medical Students' Association — ECUSTA",
+    "acronym": "EMSA-ECUSTA",
+    "type": "Medical Association",
+    "logo": "/images/clubs/emsa/logo.jpg",
+    "leadTitle": "Local Committee President (LCP)",
+    "description": "The official medical student representative body at ECUSTA affiliated with IFMSA and EMSA Ethiopia. Dedicated to clinical training, public health advocacy, and medical student empowerment.",
+    "socials": {
+      "telegram": "https://t.me/emsa_ecusta",
+      "instagram": "https://www.instagram.com/emsa.ecusta"
+    },
+    "gallery": [],
+    "committees": [
+      {
+        "id": "scome",
+        "name": "Standing Committee on Medical Education",
+        "acronym": "SCOME",
+        "logo": "/images/clubs/emsa/scome.jpg",
+        "leadTitle": "Local Officer on Medical Education (LOME)",
+        "mandate": "Focuses on medical education, curriculum support, and academic development for medical students.",
+        "socials": {
+          "telegram": "https://t.me/scome_ecusta",
+          "instagram": "https://www.instagram.com/scome_ecusta"
+        },
+        "gallery": []
+      },
+      {
+        "id": "scoph",
+        "name": "Standing Committee on Public Health",
+        "acronym": "SCOPH",
+        "logo": "/images/clubs/emsa/scoph.jpg",
+        "leadTitle": "Local Officer on Public Health (LOPH)",
+        "mandate": "Dedicated to public health awareness, disease prevention, and community health education.",
+        "socials": {
+          "telegram": "https://t.me/scoph_ecusta",
+          "instagram": "https://www.instagram.com/SCOPH_ECUSTA"
+        },
+        "gallery": []
+      },
+      {
+        "id": "score",
+        "name": "Standing Committee on Research Exchange",
+        "acronym": "SCORE",
+        "logo": "/images/clubs/emsa/score.jpg",
+        "leadTitle": "Local Officer on Research Exchange (LORE)",
+        "mandate": "Promotes medical research skills, scientific inquiry, and student research opportunities.",
+        "socials": {
+          "telegram": "https://t.me/Scoreecusta",
+          "instagram": "https://www.instagram.com/score.ecusta"
+        },
+        "gallery": []
+      },
+      {
+        "id": "scorp",
+        "name": "Standing Committee on Human Rights & Peace",
+        "acronym": "SCORP",
+        "logo": "/images/clubs/emsa/scorp.jpg",
+        "leadTitle": "Local Officer on Human Rights (LORP)",
+        "mandate": "Addresses human rights, medical ethics, patient dignity, and humanitarian issues in healthcare.",
+        "socials": {
+          "telegram": "https://t.me/SCORP_ECUSTA",
+          "instagram": "https://www.instagram.com/scorp_ecusta"
+        },
+        "gallery": []
+      },
+      {
+        "id": "scora",
+        "name": "Standing Committee on Sexual & Reproductive Health",
+        "acronym": "SCORA",
+        "logo": "/images/clubs/emsa/scora.jpg",
+        "leadTitle": "Local Officer on Reproductive Health (LORA)",
+        "mandate": "Focuses on reproductive health education, maternal health awareness, and combating health stigma.",
+        "socials": {
+          "telegram": "https://t.me/scora_ecusta",
+          "instagram": "https://www.instagram.com/scora.ecusta"
+        },
+        "gallery": []
+      },
+      {
+        "id": "scope",
+        "name": "Standing Committee on Professional Exchange",
+        "acronym": "SCOPE",
+        "logo": "/images/clubs/emsa/scope.jpg",
+        "leadTitle": "Local Officer on Professional Exchange (LEPO)",
+        "mandate": "Facilitates clinical clerkships, professional medical student exchanges, and global clinical electives.",
+        "socials": {
+          "telegram": "https://t.me/scope_ecusta",
+          "instagram": "https://www.instagram.com/scope_ecusta"
+        },
+        "gallery": []
+      }
+    ]
+  }
+]
