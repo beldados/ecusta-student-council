@@ -1,30 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**.telesco.pe",
-      },
-      {
-        protocol: "https",
-        hostname: "**.telegram.org",
-      },
+      { protocol: "https", hostname: "**.telesco.pe" },
+      { protocol: "https", hostname: "**.telegram.org" },
     ],
-  },
-  experimental: {
-    agentFeedback: true,
-    agentUpgrade: "security",
-  },
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
   },
 };
 

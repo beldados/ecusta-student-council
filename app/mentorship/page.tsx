@@ -58,7 +58,7 @@ function FallbackAvatar({ name }: { name: string }) {
 }
 
 // Mentor Card Component
-export function MentorCard({ mentor }: { mentor: Mentor }) {
+function MentorCard({ mentor }: { mentor: Mentor }) {
   const [imageError, setImageError] = useState(false);
 
   const batchDisplay = mentor.batch || mentor.mentorBatch || "PC 1";

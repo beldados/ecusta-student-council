@@ -3,7 +3,6 @@ import { virtues } from "@/data/virtues";
 import { icons } from "lucide-react";
 import InitiativesGrid from "@/components/initiatives/InitiativesGrid";
 import FAQ from "@/components/home/FAQ";
-import MedicalBackground from "@/components/ui/MedicalBackground";
 import announcementsRaw from "@/data/announcements.json";
 import { Announcement } from "@/types/announcement";
 
@@ -16,65 +15,75 @@ export default function Home() {
       if (aPinned !== bPinned) return aPinned ? -1 : 1;
       return (b.date || "").localeCompare(a.date || "");
     })
-    .slice(0, 2);
+    .slice(0, 3);
+
   return (
-    <div className="flex flex-col max-w-6xl mx-auto space-y-12 sm:space-y-16 py-4 px-4 sm:px-6 relative z-10">
-      
-      {/* 1. Hero Section */}
-      <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24 max-w-4xl mx-auto text-center space-y-6">
-        <MedicalBackground />
+    <div className="flex flex-col">
 
+      {/* ── 1. Hero Masthead ─────────────────────────────────────────── */}
+      <section className="relative bg-[#0F1B33] dark:bg-[#050B14] text-white overflow-hidden">
+        {/* Decorative gold accent line */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#9B1B30] via-[#D4AF37] to-[#9B1B30]" />
 
-        {/* Headline: Crisp, Authoritative Typography in both Light & Dark */}
-        <h1 className="text-3xl sm:text-5xl font-serif font-bold text-slate-900 dark:text-white leading-tight">
-          Empowering Students to Shape Our Medical Future
-        </h1>
+        {/* Subtle pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, #D4AF37 0, #D4AF37 1px, transparent 0, transparent 50%)",
+            backgroundSize: "20px 20px",
+          }}
+        />
 
-        {/* Subtitle */}
-        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed pl-3 border-l-2 border-[#D4AF37]/80 text-left">
-          The ECUSTA Student Council represents the student body, driving academic excellence, and fostering community engagement.
-        </p>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center z-10">
+          {/* Kicker */}
+          <p className="ivy-crest-title text-[#D4AF37] text-[11px] sm:text-xs tracking-[0.3em] mb-6">
+            Official Student Government · ECUSTA School of Medicine
+          </p>
 
-        {/* Action Buttons: Clean Rectangular Radius */}
-        <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center max-w-sm sm:max-w-none mx-auto pt-2">
-          <Link
-            href="#initiatives"
-            className="text-xs sm:text-sm font-semibold tracking-wide uppercase px-5 py-2.5 rounded-lg shadow-sm transition-all bg-[#D4AF37] hover:bg-[#C5A028] text-[#0F1B33] flex items-center justify-center"
-          >
-            Explore Initiatives
-          </Link>
-          <Link
-            href="/council"
-            className="text-xs sm:text-sm font-semibold tracking-wide uppercase px-5 py-2.5 rounded-lg shadow-sm transition-all bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] hover:bg-slate-100 dark:hover:bg-[#1E2D4D]/60 text-slate-900 dark:text-slate-200 flex items-center justify-center"
-          >
-            Meet Council
-          </Link>
+          {/* Headline */}
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 max-w-4xl mx-auto">
+            Empowering Students to{" "}
+            <span className="text-[#D4AF37]">Shape Our Medical Future</span>
+          </h1>
+
+          {/* Pull-quote subline */}
+          <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed border-l-2 border-[#D4AF37]/70 pl-4 text-left mb-10">
+            The ECUSTA Student Council represents the student body, driving
+            academic excellence, fostering community, and advocating for every
+            student at the institution.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="#initiatives"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#D4AF37] hover:bg-white text-[#0F1B33] text-xs font-bold uppercase tracking-[0.1em] border-2 border-[#D4AF37] rounded-xs shadow-md transition-all duration-200"
+            >
+              Explore Initiatives
+            </Link>
+            <Link
+              href="/council"
+              className="inline-flex items-center justify-center px-6 py-3 bg-transparent hover:bg-white/10 text-white text-xs font-bold uppercase tracking-[0.1em] border-2 border-white/30 hover:border-white/60 rounded-xs transition-all duration-200"
+            >
+              Meet the Council
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Subtle Section Divider */}
-      <div className="w-full border-t border-slate-200 dark:border-[#1E2D4D]/80" />
-
-      {/* 2. Council Initiatives with Editorial Split Header */}
-      <section id="initiatives" className="flex flex-col w-full">
-        <InitiativesGrid />
-      </section>
-
-      {/* Subtle Section Divider */}
-      <div className="w-full border-t border-slate-200 dark:border-[#1E2D4D]/80" />
-
-      {/* 3. Our Virtues (Slim compact row) */}
-      <section className="flex flex-col items-center justify-center w-full py-2">
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-2 text-center">
-          Our Virtues
-        </h2>
-        <div className="flex flex-wrap items-center justify-center gap-6 py-3">
+      {/* ── 2. Our Virtues ───────────────────────────────────────────── */}
+      <section className="bg-[#FAF8F5] dark:bg-[#0A0A0A] border-b border-stone-200 dark:border-stone-800 py-5 px-4">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-6 sm:gap-10">
           {virtues.map((virtue) => {
             const Icon = icons[virtue.iconName as keyof typeof icons] || icons.Circle;
             return (
               <div key={virtue.title} className="flex items-center gap-2 group">
-                <Icon size={18} className="text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-[#D4AF37] dark:group-hover:text-white transition-colors">
+                <Icon
+                  size={17}
+                  className="text-[#D4AF37] shrink-0 group-hover:scale-110 transition-transform"
+                />
+                <span className="text-xs sm:text-sm font-semibold text-stone-700 dark:text-stone-300 group-hover:text-[#9B1B30] dark:group-hover:text-[#D4AF37] transition-colors uppercase tracking-wide">
                   {virtue.title}
                 </span>
               </div>
@@ -83,100 +92,175 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Subtle Section Divider */}
-      <div className="w-full border-t border-slate-200 dark:border-[#1E2D4D]/80" />
+      {/* ── 3. Initiatives ───────────────────────────────────────────── */}
+      <section id="initiatives" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
+        {/* Section header — matches main site style */}
+        <div className="mb-10">
+          <p className="ivy-crest-title text-[11px] tracking-[0.25em] text-[#9B1B30] dark:text-[#D4AF37] mb-2">
+            Council Programme
+          </p>
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1B2A4A] dark:text-white leading-tight">
+              Initiatives & Projects
+            </h2>
+            <div className="hidden sm:block h-[2px] flex-1 bg-gradient-to-r from-[#D4AF37]/60 to-transparent mb-2" />
+          </div>
+        </div>
+        <InitiativesGrid />
+      </section>
 
-      {/* 4. Official Notices & Gateway */}
-      <section className="flex flex-col w-full">
-        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">
-          Official Notices &amp; Gateway
-        </h2>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4">
-          {/* Announcements block */}
-          <div className="lg:col-span-2 rounded-xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] flex flex-col justify-between p-4 shadow-sm">
-            <div className="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-[#1E2D4D]">
-              <h3 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">Latest Announcements</h3>
-              <Link href="/announcements" className="text-xs font-semibold text-[#D4AF37] hover:underline">
-                View All
-              </Link>
-            </div>
-            
-            {topAnnouncements.length === 0 ? (
-              <div className="py-3 flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-slate-100 dark:bg-[#0F1B33] flex items-center justify-center text-slate-500 dark:text-slate-400 shrink-0 border border-slate-200 dark:border-[#1E2D4D]">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                </div>
-                <div className="text-left">
-                  <h4 className="text-xs font-semibold text-slate-900 dark:text-white">No Active Notices</h4>
-                  <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-tight line-clamp-2">
-                    Official council updates, session minutes, and event notices will appear here.
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <div className="divide-y divide-slate-100 dark:divide-[#1E2D4D]/60 py-1">
-                {topAnnouncements.map((a) => (
-                  <Link
-                    key={a.id}
-                    href="/announcements"
-                    className="py-2.5 flex items-start justify-between gap-3 group block"
-                  >
-                    <div className="text-left space-y-0.5">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[10px] uppercase font-bold text-[#D4AF37]">
-                          {a.category}
-                        </span>
-                        <span className="text-[10px] text-slate-400">
-                          {a.date}
-                        </span>
-                      </div>
-                      <h4 className="text-xs font-semibold text-slate-900 dark:text-white group-hover:text-[#D4AF37] transition-colors line-clamp-1">
-                        {a.title}
-                      </h4>
-                      <p className="text-[11px] text-slate-600 dark:text-slate-400 line-clamp-1">
-                        {a.summary}
-                      </p>
-                    </div>
-                    <span className="text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-xs font-semibold mt-1">
-                      →
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            )}
+      {/* ── 4. Notices + Gateway ─────────────────────────────────────── */}
+      <section className="bg-[#FAF8F5] dark:bg-[#050B14] border-y border-stone-200 dark:border-stone-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+          <div className="mb-10">
+            <p className="ivy-crest-title text-[11px] tracking-[0.25em] text-[#9B1B30] dark:text-[#D4AF37] mb-2">
+              Official Notices
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1B2A4A] dark:text-white">
+              Announcements &amp; Gateway
+            </h2>
           </div>
 
-          {/* Side Gateway links */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5 justify-center">
-            <Link
-              href="/documents/ECUSTA_Constitution.pdf"
-              download
-              className="rounded-xl bg-[#1B2A4A] dark:bg-[#1B2A4A] border border-[#1E2D4D] text-white px-4 py-2.5 hover:bg-[#1B2A4A]/80 transition-colors flex items-center justify-between gap-3 group text-xs font-semibold shadow-sm"
-            >
-              <div className="flex items-center gap-2 truncate">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span className="truncate">Council Constitution</span>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Announcements */}
+            <div className="lg:col-span-2 ivy-card rounded-xs p-5">
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-stone-100 dark:border-stone-800">
+                <h3 className="text-sm font-bold text-[#1B2A4A] dark:text-white uppercase tracking-wide">
+                  Latest Announcements
+                </h3>
+                <Link
+                  href="/announcements"
+                  className="text-[11px] font-bold text-[#D4AF37] uppercase tracking-wider hover:underline"
+                >
+                  View All →
+                </Link>
               </div>
-              <svg className="shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </Link>
 
-            <Link
-              href="/council"
-              className="rounded-xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] hover:border-slate-300 dark:hover:border-slate-700 px-4 py-2.5 transition-colors flex items-center justify-between gap-3 group text-xs font-semibold text-slate-900 dark:text-slate-200 shadow-sm"
-            >
-              <div className="flex items-center gap-2 truncate">
-                <svg className="text-[#D4AF37] shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                <span className="truncate">Council Directory</span>
-              </div>
-              <svg className="text-[#D4AF37] shrink-0 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </Link>
+              {topAnnouncements.length === 0 ? (
+                <div className="py-4 text-sm text-stone-500 dark:text-stone-400 italic font-serif">
+                  No active notices. Official council updates will appear here.
+                </div>
+              ) : (
+                <div className="divide-y divide-stone-100 dark:divide-stone-800">
+                  {topAnnouncements.map((a) => (
+                    <Link
+                      key={a.id}
+                      href="/announcements"
+                      className="py-3 flex items-start justify-between gap-3 group block hover:bg-[#FAF8F5] dark:hover:bg-stone-900 -mx-1 px-1 rounded-xs transition-colors"
+                    >
+                      <div className="space-y-0.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-[10px] uppercase font-bold text-[#D4AF37] tracking-wider">
+                            {a.category}
+                          </span>
+                          <span className="text-[10px] text-stone-400">{a.date}</span>
+                        </div>
+                        <h4 className="text-sm font-semibold text-stone-800 dark:text-white group-hover:text-[#9B1B30] dark:group-hover:text-[#D4AF37] transition-colors line-clamp-1 font-serif">
+                          {a.title}
+                        </h4>
+                        <p className="text-xs text-stone-500 dark:text-stone-400 line-clamp-1">
+                          {a.summary}
+                        </p>
+                      </div>
+                      <span className="text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity shrink-0 text-sm mt-0.5">
+                        →
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Gateway links */}
+            <div className="flex flex-col gap-3">
+              {[
+                {
+                  href: "/documents/ECUSTA_Constitution.pdf",
+                  download: true,
+                  icon: "🏛️",
+                  label: "Council Constitution",
+                  sublabel: "Official governance document",
+                  accent: true,
+                },
+                {
+                  href: "/council",
+                  download: false,
+                  icon: "👥",
+                  label: "Council Directory",
+                  sublabel: "Meet your representatives",
+                  accent: false,
+                },
+                {
+                  href: "https://ecu.edu.et",
+                  download: false,
+                  icon: "🎓",
+                  label: "Main University Site",
+                  sublabel: "ecu.edu.et",
+                  accent: false,
+                  external: true,
+                },
+              ].map(({ href, download, icon, label, sublabel, accent, external }) => {
+                const cls = `ivy-card rounded-xs p-4 flex items-center justify-between gap-3 group transition-all ${
+                  accent
+                    ? "bg-[#1B2A4A] dark:bg-[#1B2A4A] border-[#D4AF37]/40 text-white hover:bg-[#0F1B33]"
+                    : "hover:border-t-[#9B1B30]"
+                }`;
+                const inner = (
+                  <>
+                    <div className="flex items-center gap-3">
+                      <span className="text-lg">{icon}</span>
+                      <div>
+                        <p className={`text-sm font-bold ${accent ? "text-white" : "text-[#1B2A4A] dark:text-white"}`}>
+                          {label}
+                        </p>
+                        <p className={`text-[11px] ${accent ? "text-[#D4AF37]" : "text-stone-500 dark:text-stone-400"}`}>
+                          {sublabel}
+                        </p>
+                      </div>
+                    </div>
+                    <span className={`text-sm opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all ${accent ? "text-[#D4AF37]" : "text-[#D4AF37]"}`}>
+                      →
+                    </span>
+                  </>
+                );
+
+                if (download) {
+                  return (
+                    <a key={href} href={href} download className={cls}>
+                      {inner}
+                    </a>
+                  );
+                }
+                if (external) {
+                  return (
+                    <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+                      {inner}
+                    </a>
+                  );
+                }
+                return (
+                  <Link key={href} href={href} className={cls}>
+                    {inner}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Frequently Asked Questions */}
-      <FAQ />
+      {/* ── 5. FAQ ───────────────────────────────────────────────────── */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
+        <div className="mb-10">
+          <p className="ivy-crest-title text-[11px] tracking-[0.25em] text-[#9B1B30] dark:text-[#D4AF37] mb-2">
+            Student Queries
+          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1B2A4A] dark:text-white">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <FAQ />
+      </section>
 
     </div>
   );

@@ -2,107 +2,134 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ── Brand Tokens ────────────────────────────────────────────── */
 :root {
-  --brand-navy: #1B2A4A;
-  --brand-midnight: #0F1B33;
-  --brand-gold: #D4AF37;
-  --brand-gold-hover: #C5A028;
-  --brand-crimson: #9B1B30;
-  --surface-dark: #121D33;
-  --surface-dark-border: #1E2D4D;
-  --surface-light: #FFFFFF;
-  --surface-light-bg: #FAF8F5;
-
-  --background: #FAF8F5;
-  --surface: #FFFFFF;
-  --surface-hover: #F2EFEB;
-  --border: #E2E8F0;
-  --brand: #1B2A4A;
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  
-  --foreground: var(--text-primary);
+  --brand-navy:        #1B2A4A;
+  --brand-midnight:    #0F1B33;
+  --brand-gold:        #D4AF37;
+  --brand-gold-hover:  #C5A028;
+  --brand-crimson:     #9B1B30;
+  --background:        #FAF8F5;   /* parchment */
+  --surface:           #FFFFFF;
+  --surface-hover:     #F2EFEB;
+  --border:            #E2E8F0;
+  --text-primary:      #0F172A;
+  --text-secondary:    #475569;
+  --foreground:        var(--text-primary);
+  --font-sans:         'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif:        'EB Garamond', Georgia, serif;
 }
 
 .dark {
-  --brand-navy: #1B2A4A;
-  --brand-midnight: #0F1B33;
-  --brand-gold: #D4AF37;
-  --brand-gold-hover: #C5A028;
-  --brand-crimson: #9B1B30;
-  --surface-dark: #121D33;
-  --surface-dark-border: #1E2D4D;
-  --surface-light: #FFFFFF;
-  --surface-light-bg: #FAF8F5;
-
-  --background: #0F1B33;
-  --surface: #121D33;
-  --surface-hover: #1A2846;
-  --border: #1E2D4D;
-  --brand: #D4AF37;
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  
-  --foreground: var(--text-primary);
+  --background:        #0A0A0A;
+  --surface:           #111111;
+  --surface-hover:     #1a1a1a;
+  --border:            #2A2A2A;
+  --text-primary:      #F8FAFC;
+  --text-secondary:    #94A3B8;
+  --foreground:        var(--text-primary);
 }
 
 @theme inline {
-  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy:     var(--brand-navy);
   --color-brand-midnight: var(--brand-midnight);
-  --color-brand-gold: var(--brand-gold);
-  --color-brand-gold-hover: var(--brand-gold-hover);
-  --color-brand-crimson: var(--brand-crimson);
-  --color-surface-dark: var(--surface-dark);
-  --color-surface-dark-border: var(--surface-dark-border);
-  --color-surface-light: var(--surface-light);
-  --color-surface-light-bg: var(--surface-light-bg);
-
-  --color-background: var(--background);
-  --color-surface: var(--surface);
-  --color-surface-hover: var(--surface-hover);
-  --color-border: var(--border);
-  --color-brand: var(--brand);
-  --color-text-primary: var(--text-primary);
+  --color-brand-gold:     var(--brand-gold);
+  --color-brand-crimson:  var(--brand-crimson);
+  --color-background:     var(--background);
+  --color-surface:        var(--surface);
+  --color-surface-hover:  var(--surface-hover);
+  --color-border:         var(--border);
+  --color-text-primary:   var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans), sans-serif;
-  --font-serif: var(--font-serif), Georgia, serif;
+  --color-foreground:     var(--foreground);
+  --font-sans:            var(--font-sans), sans-serif;
+  --font-serif:           var(--font-serif), Georgia, serif;
 }
 
+/* ── Base ────────────────────────────────────────────────────── */
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.font-serif {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif), Georgia, serif;
 }
 
-.font-sans {
-  font-family: var(--font-sans), sans-serif;
+/* ── Ivy League Utilities (matches main ecu.edu.et site) ─────── */
+.ivy-crest-title {
+  font-family: var(--font-serif), Georgia, serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
+.ivy-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D0C8BC;
+  border-top: 3px solid #1B2A4A;
+  box-shadow: 0 2px 8px rgba(27, 42, 74, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ivy-card:hover {
+  border-top-color: #9B1B30;
+  box-shadow: 0 12px 24px -6px rgba(155, 27, 48, 0.12), 0 4px 8px -2px rgba(27, 42, 74, 0.06);
+  transform: translateY(-2px);
+}
+.dark .ivy-card {
+  background-color: #111111;
+  border-color: #2A2A2A;
+  border-top-color: #B8972A;
+}
+.dark .ivy-card:hover {
+  border-top-color: #D4AF37;
+  box-shadow: 0 12px 24px -6px rgba(212, 175, 55, 0.2);
+}
+
+.gold-rule {
+  border-bottom: 2px solid #B8972A;
+}
+
+.pull-quote {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-left: 3px solid #B8972A;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  color: #1B2A4A;
+}
+.dark .pull-quote {
+  color: #F8FAFC;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
 .scrollbar-none {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
+.scrollbar-none::-webkit-scrollbar { display: none; }
 
+/* ── Gazette / content editor placeholder ────────────────────── */
+.gazette-editor:empty::before {
+  content: attr(data-placeholder);
+  color: #a8a29e;
+  pointer-events: none;
+  display: block;
+}
+.dark .gazette-editor:empty::before { color: #57534e; }
+
+/* ── Animations ──────────────────────────────────────────────── */
 @keyframes pulseSlow {
   0%, 100% { opacity: 0.05; transform: scaleY(0.98); }
-  50% { opacity: 0.14; transform: scaleY(1.02); }
+  50%       { opacity: 0.14; transform: scaleY(1.02); }
 }
-
 .animate-pulse-slow {
   animation: pulseSlow 6s ease-in-out infinite;
 }
-
 @media (prefers-reduced-motion: reduce) {
-  .animate-pulse-slow {
-    animation: none;
-  }
+  .animate-pulse-slow { animation: none; }
 }
-

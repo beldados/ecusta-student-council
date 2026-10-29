@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
  * Instant Tag-First Matching & Approval Helper
  * Checks for all common tag variations case-insensitively with Zero AI Delay.
  */
-export function evaluatePostTags(rawText: string) {
+function evaluatePostTags(rawText: string) {
   const lowerText = rawText.toLowerCase();
 
   const isEventTag = lowerText.includes("#event") || lowerText.includes("#events");

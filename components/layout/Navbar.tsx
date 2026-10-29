@@ -2,220 +2,298 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState, useCallback } from "react";
-import { Moon, Sun, Menu, X, ChevronRight, ArrowRight } from "lucide-react";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { Moon, Sun, Menu, X, ChevronDown, ChevronRight, Search } from "lucide-react";
+
+const NAV_LINKS = [
+  { href: "/about",         label: "About" },
+  { href: "/council",       label: "Council" },
+  { href: "/initiatives",   label: "Initiatives" },
+  { href: "/events",        label: "Events" },
+  { href: "/announcements", label: "Announcements" },
+  { href: "/clubs",         label: "Clubs" },
+  { href: "/mentorship",    label: "Mentorship" },
+  { href: "/contact",       label: "Contact" },
+];
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark]                       = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen]   = useState(false);
+  const [isScrolled, setIsScrolled]               = useState(false);
+  const [searchQuery, setSearchQuery]             = useState("");
+  const [showSearch, setShowSearch]               = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
 
+  // ── Init theme ──────────────────────────────────────────────────────────────
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
+  // ── Scroll detection ────────────────────────────────────────────────────────
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // ── Theme toggle ────────────────────────────────────────────────────────────
   const toggleTheme = () => {
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setIsDark(false);
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setIsDark(true);
-    }
+    const dark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", dark ? "dark" : "light");
+    setIsDark(dark);
   };
 
+  // ── Mobile menu ─────────────────────────────────────────────────────────────
   const closeMenu = useCallback(() => setIsMobileMenuOpen(false), []);
 
-  // Close on Escape key
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeMenu();
+      if (e.key === "Escape") { closeMenu(); setShowSearch(false); }
     };
-    if (isMobileMenuOpen) {
-      document.addEventListener("keydown", handleKey);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.addEventListener("keydown", handleKey);
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
     return () => {
       document.removeEventListener("keydown", handleKey);
       document.body.style.overflow = "";
     };
   }, [isMobileMenuOpen, closeMenu]);
 
-  const NAV_LINKS = [
-    { href: "/about", label: "About" },
-    { href: "/council", label: "Council" },
-    { href: "/events", label: "Events" },
-    { href: "/announcements", label: "Announcements" },
-    { href: "/clubs", label: "Clubs" },
-    { href: "/contact", label: "Contact" },
-  ];
-  const navLinks = NAV_LINKS;
+  // ── Search focus ────────────────────────────────────────────────────────────
+  useEffect(() => {
+    if (showSearch) searchRef.current?.focus();
+  }, [showSearch]);
 
   return (
     <>
-      {/* Top Institutional Ribbon - Desktop Only */}
-      <div className="hidden md:flex w-full bg-[#0A1324] border-b border-[#1E2D4D] text-slate-400 py-1.5 px-4 sm:px-6 lg:px-8 text-xs font-medium items-center justify-between">
+      {/* ── Top Institutional Ribbon ─────────────────────────────────────── */}
+      <div
+        className={`hidden md:flex w-full bg-[#0F1B33] border-b border-[#D4AF37]/30 text-slate-400 text-[11px] font-medium items-center justify-between px-4 sm:px-6 lg:px-8 py-1.5 transition-all duration-300 ${
+          isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
+        }`}
+      >
         <span className="flex items-center gap-1.5 text-slate-300">
-          🏛️ Official Student Government of ECUSTA • School of Medicine
+          🏛️ Official Student Government of ECUSTA · School of Medicine
         </span>
-        <div className="flex items-center gap-3">
-          <a href="https://ecu.edu.et" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">
+        <div className="flex items-center gap-4">
+          <a
+            href="https://ecu.edu.et"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#D4AF37] transition-colors"
+          >
             Main University (ecu.edu.et) ↗
           </a>
           <span className="text-slate-600">|</span>
-          <a href="https://portal.ecu.edu.et" target="_blank" rel="noopener noreferrer" className="hover:text-[#D4AF37] transition-colors">
-            Student Portal (portal.ecu.edu.et) ↗
+          <a
+            href="https://portal.ecu.edu.et"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#D4AF37] transition-colors"
+          >
+            Student Portal ↗
+          </a>
+          <span className="text-slate-600">|</span>
+          <a
+            href="https://t.me/EcustaAtlas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#D4AF37] transition-colors"
+          >
+            Telegram ↗
           </a>
         </div>
       </div>
 
-      <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur-md border-b border-border transition-colors">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-3.5">
-        
-        {/* Brand (Left) */}
-        <Link href="/" onClick={closeMenu} className="flex items-center gap-2.5 group">
-          {/* Official University Crest */}
-          <Image
-            src="/images/ecusta-crest.png"
-            alt="ECUSTA Official Crest"
-            width={36}
-            height={36}
-            className="rounded-full object-contain shrink-0"
-          />
-          <div className="h-6 w-[1px] bg-slate-700/80 mx-0.5 hidden sm:block" />
-          {/* Atlas / SC Badge */}
-          <Image
-            src="/images/initiatives/ecusta-atlas.jpg"
-            alt="ECUSTA Atlas"
-            width={32}
-            height={32}
-            className="rounded-md object-contain bg-black border border-slate-700 shrink-0"
-          />
-          <div className="flex flex-col">
-            <span className="font-bold text-sm leading-tight text-slate-900 dark:text-white tracking-tight">
-              ECUSTA SC
-            </span>
-            <span className="text-[10px] text-[#D4AF37] font-semibold uppercase tracking-wider">
-              Student Council
-            </span>
-          </div>
-        </Link>
-        
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-7">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-text-secondary hover:text-[#D4AF37] transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        
-        {/* Right Actions */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          <button 
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-surface-hover text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
-            aria-label="Toggle theme"
-          >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-          
-          {/* Desktop "Get in Touch" CTA */}
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex text-xs sm:text-sm font-semibold tracking-wide uppercase px-5 py-2.5 rounded-lg shadow-sm transition-all bg-[#D4AF37] hover:bg-[#C5A028] text-[#0F1B33]"
-          >
-            Get in Touch
-          </Link>
-
-          {/* Mobile Hamburger Menu Button */}
-          <button
-            type="button"
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open navigation menu"}
-            aria-expanded={isMobileMenuOpen}
-            className="p-2 rounded-xl bg-surface border border-border text-text-primary hover:bg-surface-hover transition-colors md:hidden cursor-pointer"
-          >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-
-      </div>
-
-      {/* Mobile Navigation Drawer */}
-      {isMobileMenuOpen && (
-        <>
-          {/* Backdrop */}
+      {/* ── Main Sticky Header ───────────────────────────────────────────── */}
+      <header
+        className={`sticky top-0 z-50 w-full bg-[#FAF8F5] dark:bg-[#0A0A0A] border-b-2 border-[#1B2A4A] dark:border-stone-800 transition-all duration-300 ${
+          isScrolled
+            ? "shadow-lg bg-white/95 dark:bg-[#0A0A0A]/95 backdrop-blur-md"
+            : ""
+        }`}
+      >
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            className="fixed inset-0 top-[57px] sm:top-[61px] bg-black/60 backdrop-blur-sm z-40 md:hidden animate-in fade-in-0 duration-200"
-            onClick={closeMenu}
-            aria-hidden="true"
-          />
+            className={`flex items-center justify-between transition-all duration-300 ${
+              isScrolled ? "h-[4.5rem]" : "h-24"
+            }`}
+          >
+            {/* ── Brand ────────────────────────────────────────────────── */}
+            <Link
+              href="/"
+              onClick={closeMenu}
+              className="flex items-center gap-3 group shrink-0"
+            >
+              <div
+                className={`flex items-center justify-center transition-all duration-300 ${
+                  isScrolled ? "w-10 h-10" : "w-12 h-12"
+                }`}
+              >
+                <Image
+                  src="/images/ecusta-crest.png"
+                  alt="ECUSTA Official Crest"
+                  width={48}
+                  height={48}
+                  className="object-contain group-hover:scale-105 transition-transform"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span
+                  className={`font-serif font-bold text-[#1B2A4A] dark:text-white leading-none tracking-tight transition-all ${
+                    isScrolled ? "text-xl" : "text-2xl"
+                  }`}
+                >
+                  ECUSTA SC
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.18em] font-bold text-[#9B1B30] dark:text-[#D4AF37] mt-0.5">
+                  Student Council
+                </span>
+              </div>
+            </Link>
 
-          {/* Slide-down Menu Panel */}
-          <div className="absolute top-full left-0 right-0 bg-surface/98 dark:bg-[#121D33]/98 backdrop-blur-xl border-b border-border shadow-2xl z-50 md:hidden animate-in slide-in-from-top-2 duration-200 p-4 sm:p-5 flex flex-col gap-2">
-            <nav className="flex flex-col gap-1">
-              {navLinks.map((link) => (
+            {/* ── Desktop Nav ──────────────────────────────────────────── */}
+            <nav className="hidden lg:flex items-center h-full gap-0.5 xl:gap-1">
+              {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={closeMenu}
-                  className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-all"
+                  className="px-2.5 xl:px-3 h-full flex items-center text-[12px] xl:text-[13px] font-bold tracking-[0.04em] uppercase text-stone-800 dark:text-stone-100 hover:text-[#9B1B30] dark:hover:text-[#D4AF37] border-b-2 border-transparent hover:border-[#D4AF37] transition-all duration-200"
                 >
-                  <span>{link.label}</span>
-                  <ChevronRight size={15} className="text-text-secondary/40" />
+                  {link.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="pt-3 mt-3 border-t border-slate-800 space-y-2">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 px-3">
-                Official University Links
-              </p>
-              <a
-                href="https://ecu.edu.et"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-3 py-2 rounded-md text-xs font-medium text-slate-300 hover:text-[#D4AF37] hover:bg-slate-800"
-              >
-                <span>Main University (ecu.edu.et)</span>
-                <span>↗</span>
-              </a>
-              <a
-                href="https://portal.ecu.edu.et"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-3 py-2 rounded-md text-xs font-medium text-slate-300 hover:text-[#D4AF37] hover:bg-slate-800"
-              >
-                <span>Student Academic Portal</span>
-                <span>↗</span>
-              </a>
-            </div>
+            {/* ── Right Actions ─────────────────────────────────────────── */}
+            <div className="flex items-center gap-2">
+              {/* Search */}
+              {showSearch ? (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    setShowSearch(false);
+                  }}
+                  className="hidden md:flex items-center gap-1.5 border border-stone-300 dark:border-stone-700 rounded-xs px-3 py-1.5 bg-white dark:bg-[#111]"
+                >
+                  <input
+                    ref={searchRef}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search council…"
+                    className="text-xs outline-none bg-transparent text-stone-800 dark:text-stone-100 w-40"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowSearch(false)}
+                    className="text-stone-400 hover:text-stone-600"
+                  >
+                    <X size={14} />
+                  </button>
+                </form>
+              ) : (
+                <button
+                  onClick={() => setShowSearch(true)}
+                  className="hidden md:flex p-2 text-stone-700 dark:text-stone-300 hover:text-[#9B1B30] dark:hover:text-[#D4AF37] transition-colors"
+                  aria-label="Search"
+                >
+                  <Search size={18} />
+                </button>
+              )}
 
-            <div className="pt-3 mt-1 border-t border-border flex flex-col gap-2.5">
+              {/* Theme toggle */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-600 dark:text-stone-300 transition-colors cursor-pointer"
+                aria-label="Toggle theme"
+              >
+                {isDark ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+
+              {/* Desktop CTA */}
               <Link
                 href="/contact"
-                onClick={closeMenu}
-                className="w-full text-xs sm:text-sm font-semibold tracking-wide uppercase px-5 py-2.5 rounded-lg shadow-sm transition-all bg-[#D4AF37] hover:bg-[#C5A028] text-[#0F1B33] inline-flex items-center justify-center gap-1.5"
+                className="hidden md:inline-flex items-center px-4 py-2 bg-[#9B1B30] hover:bg-[#1B2A4A] text-white text-[11px] font-bold uppercase tracking-[0.1em] border-2 border-[#D4AF37] rounded-xs shadow-md transition-all duration-200 whitespace-nowrap"
               >
-                <span>Get in Touch</span>
-                <ArrowRight size={15} />
+                Get in Touch
               </Link>
+
+              {/* Mobile hamburger */}
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
+                className="p-2 rounded-xs bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-white hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors lg:hidden cursor-pointer"
+              >
+                {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
             </div>
           </div>
-        </>
-      )}
-    </header>
+        </div>
+
+        {/* ── Mobile Drawer ─────────────────────────────────────────────── */}
+        {isMobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <div
+              className="fixed inset-0 top-[4.5rem] bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+              onClick={closeMenu}
+              aria-hidden="true"
+            />
+
+            {/* Panel */}
+            <div className="absolute top-full left-0 right-0 bg-white dark:bg-[#0A0A0A] border-b-2 border-[#1B2A4A] dark:border-stone-800 shadow-2xl z-50 lg:hidden p-4 flex flex-col gap-2">
+              <nav className="flex flex-col gap-1">
+                {NAV_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="flex items-center justify-between px-4 py-3 text-sm font-bold uppercase tracking-wide text-stone-700 dark:text-stone-200 hover:text-[#9B1B30] dark:hover:text-[#D4AF37] hover:bg-stone-50 dark:hover:bg-stone-900 border-b border-stone-100 dark:border-stone-800 last:border-0 transition-all"
+                  >
+                    <span>{link.label}</span>
+                    <ChevronRight size={14} className="text-stone-400" />
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Official links */}
+              <div className="pt-3 mt-2 border-t border-stone-100 dark:border-stone-800 space-y-1.5">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-stone-400 px-3 mb-2">
+                  Official Links
+                </p>
+                {[
+                  { href: "https://ecu.edu.et", label: "Main University (ecu.edu.et)" },
+                  { href: "https://portal.ecu.edu.et", label: "Student Academic Portal" },
+                  { href: "https://t.me/EcustaAtlas", label: "Telegram Channel" },
+                ].map(({ href, label }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between px-3 py-2 rounded-xs text-xs font-medium text-stone-500 dark:text-stone-400 hover:text-[#D4AF37] hover:bg-stone-50 dark:hover:bg-stone-900 transition-colors"
+                  >
+                    <span>{label}</span>
+                    <span className="text-stone-300">↗</span>
+                  </a>
+                ))}
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="pt-3 border-t border-stone-100 dark:border-stone-800">
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 bg-[#9B1B30] hover:bg-[#1B2A4A] text-white text-xs font-bold uppercase tracking-wider border-2 border-[#D4AF37] rounded-xs shadow-md transition-all"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
+      </header>
     </>
   );
 }
-
