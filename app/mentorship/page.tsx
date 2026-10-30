@@ -16,7 +16,7 @@ const mentorshipData = mentorshipDataRaw as MentorshipData;
 const defaultCohorts: Cohort[] = [
   {
     id: "G1",
-    name: "Generation 1 (PC ➔ ITM)",
+    name: "Generation 1 (PC → ITM)",
     cycle: "Academic Cycle 2026/2027",
     mentorBatch: "PC 1 & PC 2",
     menteeTarget: "ITM Students",
@@ -25,7 +25,7 @@ const defaultCohorts: Cohort[] = [
   },
   {
     id: "G2",
-    name: "Generation 2 (ITM ➔ Freshmen)",
+    name: "Generation 2 (ITM → Freshmen)",
     cycle: "Academic Cycle 2026/2027",
     mentorBatch: "ITM",
     menteeTarget: "Freshmen",

@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     const chatId = process.env.SECRETARIAT_CHAT_ID || "-1004339772011";
 
     const submitter = isAnonymous
-      ? `🔒 Anonymous Student (${batch || "Batch Unspecified"})`
+      ? `Anonymous Student (${batch || "Batch Unspecified"})`
       : `${fullName || "Student"} (${batch || "Batch Unspecified"})`;
 
     const safeText = String(rawMessage)
@@ -35,16 +35,16 @@ export async function POST(request: Request) {
       .replace(/>/g, "&gt;");
 
     const htmlMessage = `
-<b>🚨 NEW COUNCIL INQUIRY (Via Website)</b>
+<b>[NEW COUNCIL INQUIRY] (Via Website)</b>
 ───────────────────────────────
-📁 <b>Category:</b> ${category}
-👤 <b>Submitter:</b> ${submitter}
-📅 <b>Date:</b> ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+<b>Category:</b> ${category}
+<b>Submitter:</b> ${submitter}
+<b>Date:</b> ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
 
-💬 <b>Message:</b>
+<b>Message:</b>
 ${safeText}
 ───────────────────────────────
-✅ <i>Routed to Council Secretariat Desk</i>
+<i>Routed to Council Secretariat Desk</i>
     `.trim();
 
     const tgRes = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {

@@ -96,13 +96,13 @@ export async function sendSecretariatAlert(payload: SecretariatAlertPayload) {
   const secretariatChatId = process.env.SECRETARIAT_CHAT_ID || "-1004339772011";
 
   const alertText = [
-    `🚨 *New Council Secretariat Inquiry*`,
+    `*New Council Secretariat Inquiry*`,
     ``,
-    `📍 *Source:* ${payload.source}`,
-    `📂 *Category:* ${payload.category}`,
-    `👤 *Submitter:* ${payload.submitter}`,
+    `*Source:* ${payload.source}`,
+    `*Category:* ${payload.category}`,
+    `*Submitter:* ${payload.submitter}`,
     ``,
-    `💬 *Message:*`,
+    `*Message:*`,
     payload.message,
   ].join("\n");
 

@@ -10,6 +10,7 @@ import {
   Send,
   ArrowRight,
   BookOpen,
+  Landmark,
 } from "lucide-react";
 import clubsData from "@/data/clubs.json";
 import { StudentOrganization } from "@/types/organization";
@@ -258,8 +259,8 @@ export default function ClubsPage() {
           Displayed while EMSA-ECUSTA formal consent is finalized.
           ========================================================================= */}
       <div className="py-20 text-center max-w-2xl mx-auto space-y-4 px-4 bg-white dark:bg-[#121D33] rounded-2xl border border-slate-200 dark:border-[#1E2D4D] shadow-sm my-8">
-        <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mx-auto text-2xl">
-          🏛️
+        <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mx-auto">
+          <Landmark size={24} />
         </div>
         <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 dark:text-white tracking-tight">
           Student Organizations &amp; Medical Chapters

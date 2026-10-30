@@ -72,20 +72,20 @@ export async function POST(request: NextRequest) {
     // 1. /start
     if (text.startsWith("/start")) {
       const startText = [
-        "👋 *Welcome to the ECUSTA Student Council Confidential Inquiry Desk* 🩺",
+        "*Welcome to the ECUSTA Student Council Confidential Inquiry Desk*",
         "",
         "This official bot is maintained by the Council Secretariat to receive student inquiries, hospital ward concerns, and academic petitions.",
         "",
-        "🔐 *Confidentiality:* Submissions can be filed anonymously with zero identity tracking.",
+        "*Confidentiality:* Submissions can be filed anonymously with zero identity tracking.",
         "",
-        "👉 Tap the button below to open our official inquiry portal:",
+        "Use the link below to open our official inquiry portal:",
       ].join("\n");
 
       await reply(chatId, startText, {
         inline_keyboard: [
           [
             {
-              text: "📝 Submit Council Inquiry",
+              text: "Submit Council Inquiry",
               url: "https://ecusta-student-council.vercel.app/contact",
             },
           ],
@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
     // 2. /inquire
     if (text.startsWith("/inquire")) {
       const inquireText = [
-        "📝 *How to Submit an Inquiry or Petition:*",
+        "*How to Submit an Inquiry or Petition:*",
         "",
         "1. Visit our verified web portal: https://ecusta-student-council.vercel.app/contact",
         "2. Select your category (Academic, Hospital Attachments, Facilities, General).",
@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
         inline_keyboard: [
           [
             {
-              text: "📝 Submit Council Inquiry",
+              text: "Submit Council Inquiry",
               url: "https://ecusta-student-council.vercel.app/contact",
             },
           ],
@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
     // 3. /confidentiality
     if (text.startsWith("/confidentiality")) {
       const confidentialityText = [
-        "🛡️ *Council Non-Retaliation & Confidentiality Policy*",
+        "*Council Non-Retaliation & Confidentiality Policy*",
         "",
         "• All inquiries are reviewed exclusively by authorized executive officers.",
         "• Anonymous submissions do not collect name, student ID, or personal identifiers.",
@@ -135,9 +135,9 @@ export async function POST(request: NextRequest) {
     // 4. /contact
     if (text.startsWith("/contact")) {
       const contactText = [
-        "📍 *Council Secretariat Office:* ECUSTA Main Campus, Student Center Building, Office 204",
-        "🕒 *Executive Office Hours:* Monday – Friday • 10:00 AM – 04:00 PM",
-        "📧 *Official Email:* secretariat.sc@ecusta.edu.et",
+        "*Council Secretariat Office:* ECUSTA Main Campus, Student Center Building, Office 204",
+        "*Executive Office Hours:* Monday – Friday • 10:00 AM – 04:00 PM",
+        "*Official Email:* secretariat.sc@ecusta.edu.et",
       ].join("\n");
 
       await reply(chatId, contactText);
@@ -147,21 +147,21 @@ export async function POST(request: NextRequest) {
     // 5. /help
     if (text.startsWith("/help")) {
       const helpText = [
-        "📋 *ECUSTA Enquiry Bot Commands:*",
+        "*ECUSTA Enquiry Bot Commands:*",
         "",
         "/start - Welcome & Portal Gateway",
         "/inquire - Step-by-step submission guide",
         "/confidentiality - Non-retaliation & anonymity policies",
         "/contact - Secretariat office location, hours & email",
         "",
-        "👉 Portal: https://ecusta-student-council.vercel.app/contact",
+        "Portal: https://ecusta-student-council.vercel.app/contact",
       ].join("\n");
 
       await reply(chatId, helpText, {
         inline_keyboard: [
           [
             {
-              text: "📝 Submit Council Inquiry",
+              text: "Submit Council Inquiry",
               url: "https://ecusta-student-council.vercel.app/contact",
             },
           ],
@@ -178,7 +178,7 @@ export async function POST(request: NextRequest) {
       inline_keyboard: [
         [
           {
-            text: "📝 Submit Council Inquiry",
+            text: "Submit Council Inquiry",
             url: "https://ecusta-student-council.vercel.app/contact",
           },
         ],

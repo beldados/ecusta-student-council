@@ -197,12 +197,12 @@ export async function scrapeCampusFeed(): Promise<{
           if (isInstantApproval) {
             // INSTANT APPROVAL (Zero AI Delay): APPROVE IMMEDIATELY WITHOUT CALLING SILICONFLOW!
             console.log(
-              `🎯 Instant Tag-First approval (Zero AI delay) for @${channel.handle}! ` +
+              `[Instant Approval] Tag-First approval for @${channel.handle}! ` +
               `[event=${isEventTag}, announcement=${isAnnouncementTag}, recruitment=${isRecruitmentTag}]`
             );
           } else {
             // Official keyword post without tag: evaluate routing via SiliconFlow AI
-            console.log(`🔍 Evaluating content routing for @${channel.handle} via SiliconFlow AI...`);
+            console.log(`[AI Routing] Evaluating content routing for @${channel.handle} via SiliconFlow AI...`);
             const evaluation = await evaluateTelegramPost(rawText);
 
             if (evaluation && evaluation.isWorthy) {

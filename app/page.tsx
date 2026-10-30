@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { virtues } from "@/data/virtues";
-import { icons } from "lucide-react";
+import { icons, Scroll, Users, GraduationCap } from "lucide-react";
 import InitiativesGrid from "@/components/initiatives/InitiativesGrid";
 import FAQ from "@/components/home/FAQ";
 import announcementsRaw from "@/data/announcements.json";
@@ -165,7 +165,7 @@ export default function Home() {
                 {
                   href: "/documents/ECUSTA_Constitution.pdf",
                   download: true,
-                  icon: "🏛️",
+                  icon: <Scroll size={18} className="text-[#D4AF37]" />,
                   label: "Council Constitution",
                   sublabel: "Official governance document",
                   accent: true,
@@ -173,7 +173,7 @@ export default function Home() {
                 {
                   href: "/council",
                   download: false,
-                  icon: "👥",
+                  icon: <Users size={18} className="text-[#1B2A4A] dark:text-[#D4AF37]" />,
                   label: "Council Directory",
                   sublabel: "Meet your representatives",
                   accent: false,
@@ -181,7 +181,7 @@ export default function Home() {
                 {
                   href: "https://ecu.edu.et",
                   download: false,
-                  icon: "🎓",
+                  icon: <GraduationCap size={18} className="text-[#1B2A4A] dark:text-[#D4AF37]" />,
                   label: "Main University Site",
                   sublabel: "ecu.edu.et",
                   accent: false,
@@ -196,7 +196,7 @@ export default function Home() {
                 const inner = (
                   <>
                     <div className="flex items-center gap-3">
-                      <span className="text-lg">{icon}</span>
+                      <span className="shrink-0">{icon}</span>
                       <div>
                         <p className={`text-sm font-bold ${accent ? "text-white" : "text-[#1B2A4A] dark:text-white"}`}>
                           {label}

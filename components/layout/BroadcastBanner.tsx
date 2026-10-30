@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { AlertCircle, X } from "lucide-react";
 import { Announcement } from "@/types/announcement";
 
 export default function BroadcastBanner() {
@@ -54,14 +55,15 @@ export default function BroadcastBanner() {
       aria-live="assertive"
       className="w-full bg-[#9B1B30] text-white px-4 py-2.5 text-xs sm:text-sm font-medium flex items-center justify-between shadow-md transition-all relative z-50"
     >
-      {/* Left: Pulsing dot + 🚨 URGENT: + title */}
+      {/* Left: Pulsing dot + URGENT: + title */}
       <div className="flex items-center gap-2 truncate pr-2">
         <span className="relative flex h-2 w-2 shrink-0">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300 opacity-75" />
           <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
         </span>
-        <span className="font-bold tracking-wider text-amber-300 uppercase shrink-0">
-          🚨 URGENT:
+        <span className="inline-flex items-center gap-1 font-bold tracking-wider text-amber-300 uppercase shrink-0">
+          <AlertCircle size={14} />
+          <span>URGENT:</span>
         </span>
         <span className="truncate">{announcement.title}</span>
       </div>
@@ -80,7 +82,7 @@ export default function BroadcastBanner() {
           aria-label="Dismiss broadcast"
           className="p-1 hover:bg-black/20 rounded transition-colors"
         >
-          ✕
+          <X size={15} />
         </button>
       </div>
     </div>
