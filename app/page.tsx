@@ -93,19 +93,7 @@ export default function Home() {
       </section>
 
       {/* ── 3. Initiatives ───────────────────────────────────────────── */}
-      <section id="initiatives" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
-        {/* Section header — matches main site style */}
-        <div className="mb-10">
-          <p className="ivy-crest-title text-[11px] tracking-[0.25em] text-[#9B1B30] dark:text-[#D4AF37] mb-2">
-            Council Programme
-          </p>
-          <div className="flex items-end justify-between gap-4">
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1B2A4A] dark:text-white leading-tight">
-              Initiatives & Projects
-            </h2>
-            <div className="hidden sm:block h-[2px] flex-1 bg-gradient-to-r from-[#D4AF37]/60 to-transparent mb-2" />
-          </div>
-        </div>
+      <section id="initiatives" className="scroll-mt-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full">
         <InitiativesGrid />
       </section>
 

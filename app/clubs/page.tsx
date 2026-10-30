@@ -253,12 +253,30 @@ export default function ClubsPage() {
         </div>
       </div>
 
-      {/* 3. Organizations List */}
-      <section className="space-y-6">
+      {/* =========================================================================
+          OFFICIAL PARTNERSHIP VERIFICATION NOTICE
+          Displayed while EMSA-ECUSTA formal consent is finalized.
+          ========================================================================= */}
+      <div className="py-20 text-center max-w-2xl mx-auto space-y-4 px-4 bg-white dark:bg-[#121D33] rounded-2xl border border-slate-200 dark:border-[#1E2D4D] shadow-sm my-8">
+        <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center mx-auto text-2xl">
+          🏛️
+        </div>
+        <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 dark:text-white tracking-tight">
+          Student Organizations &amp; Medical Chapters
+        </h2>
+        <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed pl-3 border-l-2 border-[#D4AF37]/80 text-left">
+          Student Organizations &amp; Medical Chapters directory is currently undergoing annual partnership charter verification for the 2026/2027 academic term. Official profiles and Standing Committees will be published upon ratification.
+        </p>
+      </div>
+
+      {/* =========================================================================
+          UNCOMMENT BELOW WHEN EMSA-ECUSTA FORMALLY APPROVES:
+      <div className="space-y-8">
         {organizations.map((org) => (
           <OrganizationCard key={org.id} org={org} />
         ))}
-      </section>
+      </div>
+          ========================================================================= */}
 
       {/* 4. Bottom Charter Callout */}
       <section className="rounded-2xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">

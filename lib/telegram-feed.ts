@@ -5,6 +5,9 @@ import { evaluateTelegramPost } from "@/lib/ai";
 export const MONITORED_CHANNELS = [
   { handle: "ecustanotice", source: "University Notice Board", category: "Administration" },
   { handle: "EcustaAtlas", source: "Student Council / Atlas", category: "Campus Governance" },
+  /* =========================================================================
+     TEMPORARILY PAUSED: Pending formal written consent from EMSA-ECUSTA.
+     To restore when approved, simply uncomment these lines:
   { handle: "emsa_ecusta", source: "EMSA-ECUSTA", category: "Medical Association" },
   { handle: "scome_ecusta", source: "EMSA SCOME", category: "Medical Education" },
   { handle: "scoph_ecusta", source: "EMSA SCOPH", category: "Public Health" },
@@ -12,6 +15,7 @@ export const MONITORED_CHANNELS = [
   { handle: "SCORP_ECUSTA", source: "EMSA SCORP", category: "Human Rights & Peace" },
   { handle: "scora_ecusta", source: "EMSA SCORA", category: "Reproductive Health" },
   { handle: "scope_ecusta", source: "EMSA SCOPE", category: "Professional Exchange" },
+     ========================================================================= */
 ];
 
 const OFFICIAL_KEYWORD_REGEX =

@@ -8,7 +8,7 @@ import { Moon, Sun, Menu, X, ChevronDown, ChevronRight, Search } from "lucide-re
 const NAV_LINKS = [
   { href: "/about",         label: "About" },
   { href: "/council",       label: "Council" },
-  { href: "/initiatives",   label: "Initiatives" },
+  { href: "/#initiatives",  label: "INITIATIVES" },
   { href: "/events",        label: "Events" },
   { href: "/announcements", label: "Announcements" },
   { href: "/clubs",         label: "Clubs" },
@@ -71,8 +71,9 @@ export default function Navbar() {
           isScrolled ? "h-0 py-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
         }`}
       >
-        <span className="flex items-center gap-1.5 text-slate-300">
-          🏛️ Official Student Government of ECUSTA · School of Medicine
+        <span className="flex items-center gap-2 text-slate-300">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+          Official Student Government • Ethiopian Catholic Higher Learning Institute (ECUSTA)
         </span>
         <div className="flex items-center gap-4">
           <a
