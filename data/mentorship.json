@@ -18,7 +18,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": true
     },
     {
       "id": "arsema-tariku",
@@ -34,7 +35,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "basleal-bereket",
@@ -50,7 +52,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": true
     },
     {
       "id": "dibora",
@@ -66,7 +69,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": true
     },
     {
       "id": "fenet-aboma",
@@ -82,7 +86,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": true
     },
     {
       "id": "hanna-semunigus",
@@ -98,7 +103,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "lidetu-abera",
@@ -114,7 +120,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": true
     },
     {
       "id": "natanim-amare",
@@ -130,7 +137,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": true
     },
     {
       "id": "paulos-leul",
@@ -146,7 +154,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "sebrin-jemal",
@@ -162,7 +171,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "selwa",
@@ -178,7 +188,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "sifen-getachew",
@@ -194,7 +205,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "tizita-atnafu",
@@ -210,7 +222,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "yanet-shemeles",
@@ -226,7 +239,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     },
     {
       "id": "zemichael-biruk",
@@ -242,7 +256,8 @@
       },
       "status": "Active",
       "generation": "G1",
-      "cohortId": "G1"
+      "cohortId": "G1",
+      "isPublished": false
     }
   ],
   "cohorts": [

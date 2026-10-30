@@ -7,6 +7,7 @@ export type CouncilPosition =
   | "VP of Dormitory & Welfare"
   | "VP of Social Media"
   | "VP of Graphics & Design"
+  | "VP of Events & Graphic Design"
   | "VP of Information Systems"
   | "VP of PR and Communication"
   | "Lead Developer"
@@ -36,4 +37,5 @@ export interface CouncilMember {
   email: string | null;
   telegram: string | null;
   linkedin?: string | null;
+  isPublished?: boolean;
 }

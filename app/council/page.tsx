@@ -196,9 +196,11 @@ function CouncilMemberCard({ member }: { member: CouncilMember }) {
 
 
 export default function CouncilPage() {
-  console.log("Total Council Members Loaded:", councilMembers.length);
+  const activeMembers: CouncilMember[] = (councilMembers as CouncilMember[]).filter(
+    (m) => m.isPublished !== false
+  );
 
-  const members: CouncilMember[] = councilMembers as CouncilMember[];
+  console.log("Total Confirmed Council Members Loaded:", activeMembers.length);
 
   // Normalize category checks using .toLowerCase().trim()
   const getCategory = (member: CouncilMember): string => {
@@ -249,10 +251,10 @@ export default function CouncilPage() {
     return "other";
   };
 
-  const executives = members.filter((m) => getCategory(m) === "vp");
-  const clinicalReps = members.filter((m) => getCategory(m) === "hospital_rep");
-  const developers = members.filter((m) => getCategory(m) === "developer");
-  const otherMembers = members.filter((m) => {
+  const executives = activeMembers.filter((m) => getCategory(m) === "vp");
+  const clinicalReps = activeMembers.filter((m) => getCategory(m) === "hospital_rep");
+  const developers = activeMembers.filter((m) => getCategory(m) === "developer");
+  const otherMembers = activeMembers.filter((m) => {
     const cat = getCategory(m);
     return cat !== "vp" && cat !== "developer" && cat !== "hospital_rep";
   });

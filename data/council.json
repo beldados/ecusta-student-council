@@ -9,7 +9,8 @@
     "bio": "PC1 medical student with a passion for philosophy, coding, and connecting ideas across disciplines. Passionate about institutional communication and builder culture.",
     "email": "daniel.demerw@ecusta-hli.edu.et",
     "telegram": "beldados",
-    "linkedin": "https://linkedin.com/in/daniel-demerw"
+    "linkedin": "https://linkedin.com/in/daniel-demerw",
+    "isPublished": true
   },
   {
     "id": "deborah-million",
@@ -21,7 +22,8 @@
     "bio": "A student of medicine and of life, continually seeking wisdom in knowing my Creator, finding expression in music and literature, and cherishing conversations that challenge the mind and nourish the soul. Above all, I remain a student of growth, embracing the person I am becoming.",
     "email": "deborah.million251@ecusta-hli.edu.et",
     "telegram": "Jehovah12345",
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "sifen-getachew",
@@ -33,7 +35,8 @@
     "bio": "The best way to find yourself is to lose yourself in helping others succeed.",
     "email": null,
     "telegram": null,
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": false
   },
   {
     "id": "natanim-amare",
@@ -45,7 +48,8 @@
     "bio": "Progress over perfection.",
     "email": "natanim.amare296@ecusta-hli.edu.et",
     "telegram": null,
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "basleal-bereket",
@@ -57,7 +61,8 @@
     "bio": "Silent moves, loud results.",
     "email": "baslealbereket@gmail.com",
     "telegram": "basleal1996",
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "lidetu-abera",
@@ -69,7 +74,21 @@
     "bio": "The best mentors don't create followers—they create future leaders.",
     "email": null,
     "telegram": null,
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
+  },
+  {
+    "id": "fenet-aboma",
+    "name": "Fenet Aboma Fite",
+    "role": "VP of Events & Graphic Design",
+    "department": "Doctor of Medicine (MD)",
+    "batch": "PC 2",
+    "image": "/images/council/fenet-aboma.jpg",
+    "bio": "I am a medical student at ECUSTA University who values learning, personal growth, and discovering new perspectives. I enjoy exploring new ideas, building meaningful connections, and embracing experiences that challenge me to grow. I believe in the importance of staying curious, being open to new opportunities, and making a positive impact on the people around me. I strive to approach every experience with an open mind, a willingness to learn, and a genuine desire to grow.",
+    "email": "fenet.aboma285@ecusta-hli.edu.et",
+    "telegram": "nanifen16",
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "ruhamah-nathnael",
@@ -81,7 +100,8 @@
     "bio": "Fifth-year medical student dedicated to contributing to a better world.",
     "email": "ruhamahnathnael@gmail.com",
     "telegram": null,
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "mesula-wubliker",
@@ -104,7 +124,8 @@
     ],
     "email": "mesuliker2@gmail.com",
     "telegram": "Sliker_m",
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "minilik-adugna",
@@ -116,7 +137,8 @@
     "bio": "Representative of 2021 Medicine Department. Currently attaching at Alert Specialized Comprehensive Hospital.",
     "email": "minilik.adugna137@ecusta-hli.edu.et",
     "telegram": "minilik_aj",
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   },
   {
     "id": "nahum-admasu",
@@ -128,6 +150,7 @@
     "bio": "Representative of the 2021 medicine department. Currently attaching at Alert Specialized Comprehensive Hospital. Member of the USMLE task force.",
     "email": "nahum.admasu72@ecusta-hli.edu.et",
     "telegram": "mahir_ady",
-    "linkedin": null
+    "linkedin": null,
+    "isPublished": true
   }
 ]

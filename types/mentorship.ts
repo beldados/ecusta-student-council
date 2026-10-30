@@ -30,6 +30,7 @@ export interface Mentor {
   specialties?: string[];
   mentorBatch?: string; // backwards compatibility alias
   availableTime?: string; // backwards compatibility alias
+  isPublished?: boolean;
 }
 
 export interface MentorshipData {

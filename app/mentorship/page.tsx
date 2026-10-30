@@ -120,8 +120,9 @@ export default function MentorshipPage() {
   const [selectedBatch, setSelectedBatch] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const rawMentors: Mentor[] = useMemo(() => {
-    return Array.isArray(mentorshipData.mentors) ? mentorshipData.mentors : [];
+  const activeMentors: Mentor[] = useMemo(() => {
+    const list = Array.isArray(mentorshipData.mentors) ? mentorshipData.mentors : [];
+    return list.filter((m) => m.isPublished !== false);
   }, []);
 
   const activeCohort =
@@ -129,10 +130,10 @@ export default function MentorshipPage() {
 
   // Mentors within active cohort
   const cohortMentors = useMemo(() => {
-    return rawMentors.filter(
+    return activeMentors.filter(
       (m) => (m.cohortId || m.generation || "G1") === activeCohortId
     );
-  }, [rawMentors, activeCohortId]);
+  }, [activeMentors, activeCohortId]);
 
   // Derive batch counts and filter pills for active cohort
   const batchCounts = useMemo(() => {
@@ -270,7 +271,7 @@ export default function MentorshipPage() {
                 }}
                 className="text-xs sm:text-sm font-semibold tracking-wide uppercase px-5 py-2.5 rounded-lg shadow-sm transition-all border border-slate-200 dark:border-[#1E2D4D] bg-white dark:bg-[#121D33] hover:bg-slate-100 dark:hover:bg-[#1E2D4D]/60 text-slate-900 dark:text-slate-200 cursor-pointer"
               >
-                View Generation 1 Mentors (15)
+                View Generation 1 Mentors ({activeMentors.length})
               </button>
             </div>
           </div>
