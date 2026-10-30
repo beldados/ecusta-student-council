@@ -17,27 +17,27 @@ const FOOTER_LINKS: FooterColumn[] = [
   {
     heading: "Student Council",
     links: [
-      { href: "/about",       label: "About the Council" },
-      { href: "/council",     label: "Council Directory" },
-      { href: "/governance",  label: "Governance & Charter" },
+      { href: "/about", label: "About the Council" },
+      { href: "/council", label: "Council Directory" },
+      { href: "/governance", label: "Governance & Charter" },
       { href: "/initiatives", label: "Initiatives" },
-      { href: "/mentorship",  label: "Mentorship Programme" },
-      { href: "/clubs",       label: "Clubs & Organizations" },
+      { href: "/mentorship", label: "Mentorship Programme" },
+      { href: "/clubs", label: "Clubs & Organizations" },
     ],
   },
   {
     heading: "Student Life",
     links: [
-      { href: "/events",         label: "Events & Calendar" },
-      { href: "/announcements",  label: "Announcements" },
-      { href: "/contact",        label: "Contact the Council" },
+      { href: "/events", label: "Events & Calendar" },
+      { href: "/announcements", label: "Announcements" },
+      { href: "/contact", label: "Contact the Council" },
     ],
   },
   {
     heading: "University",
     links: [
-      { href: "https://ecu.edu.et",            label: "ECUSTA Main Website", external: true },
-      { href: "https://portal.ecu.edu.et",     label: "Student Portal", external: true },
+      { href: "https://ecu.edu.et", label: "ECUSTA Main Website", external: true },
+      { href: "https://portal.ecu.edu.et", label: "Student Portal", external: true },
       { href: "https://elearn.ecusta-hli.edu.et", label: "E-Learning (DLC)", external: true },
       { href: "https://portal.ecu.edu.et/helpdesk", label: "HelpDesk", external: true },
     ],
@@ -45,13 +45,13 @@ const FOOTER_LINKS: FooterColumn[] = [
 ];
 
 const SOCIAL = [
-  { href: "https://t.me/EcustaAtlas",       label: "Telegram", icon: <Send size={16} /> },
+  { href: "https://t.me/EcustaAtlas", label: "Telegram", icon: <Send size={16} /> },
   {
     href: "https://www.instagram.com/ecusta.atlas",
     label: "Instagram",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
       </svg>
     ),
   },
@@ -157,7 +157,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-[11px] text-slate-500">
-            Built by <span className="text-[#D4AF37]">Daniel Demerw</span>
+            Built by <span className="text-[#D4AF37]">beldados</span>
           </p>
         </div>
       </div>

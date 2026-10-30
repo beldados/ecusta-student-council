@@ -1,0 +1,18 @@
+{
+  "title": "About the ECUSTA Student Council",
+  "statement": "The official representative body of students at the Ethiopian Catholic University of St. Thomas Aquinas (ECUSTA). We advocate for student interests, advance academic excellence, promote student welfare, and foster a vibrant, inclusive, and supportive campus community.",
+  "pillars": [
+    {
+      "title": "Student Advocacy & Voice",
+      "description": "Serving as the direct bridge between the student body and university leadership to represent student perspectives, address concerns, and support student rights."
+    },
+    {
+      "title": "Academic Excellence",
+      "description": "Encouraging collaborative study initiatives, peer mentorship, academic resources, and educational workshops for all students."
+    },
+    {
+      "title": "Student Welfare & Campus Life",
+      "description": "Fostering an inclusive campus environment, supporting student wellness, and encouraging meaningful student engagement across the university."
+    }
+  ]
+}

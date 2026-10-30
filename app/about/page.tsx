@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import aboutData from "@/data/about.json";
 import governanceDataRaw from "@/data/governance.json";
 import { GovernanceDocument } from "@/types/governance";
 import {
@@ -36,7 +37,7 @@ export default function AboutPage() {
         </h1>
 
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl mx-auto mt-5 pl-3 border-l-2 border-[#D4AF37]/80 text-left">
-          The supreme representative body of medical students at the Ethiopian Catholic University of St. Thomas Aquinas (ECUSTA). We advance academic excellence, protect student welfare, and foster compassionate clinicians.
+          {aboutData.statement}
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -57,52 +58,32 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. Council Mission & Core Mandate */}
+      {/* 2. Council Pillars & Core Mandate */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] transition-all duration-200 hover:border-[#D4AF37]/60 dark:hover:border-[#D4AF37]/50 hover:-translate-y-0.5 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center mb-5">
-              <Compass size={22} />
+        {aboutData.pillars.map((pillar, idx) => {
+          const Icon = idx === 0 ? Compass : idx === 1 ? Award : Shield;
+          return (
+            <div
+              key={pillar.title}
+              className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] transition-all duration-200 hover:border-[#D4AF37]/60 dark:hover:border-[#D4AF37]/50 hover:-translate-y-0.5 flex flex-col justify-between shadow-xs"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center mb-5">
+                  <Icon size={22} />
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold tracking-tight text-slate-900 dark:text-white mb-2">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+              <div className="mt-5 pt-3 border-t border-border/60 text-xs font-semibold text-[#D4AF37]">
+                {pillar.title}
+              </div>
             </div>
-            <h3 className="text-base sm:text-lg font-semibold tracking-tight text-slate-900 dark:text-white mb-2">Our Mission</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              To faithfully represent the academic, spiritual, and clinical aspirations of all medical students, bridging dialogue between students, faculty leadership, and hospital administration.
-            </p>
-          </div>
-          <div className="mt-5 pt-3 border-t border-border/60 text-xs font-semibold text-[#D4AF37]">
-            Accountable Student Representation
-          </div>
-        </div>
-
-        <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] transition-all duration-200 hover:border-[#D4AF37]/60 dark:hover:border-[#D4AF37]/50 hover:-translate-y-0.5 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center mb-5">
-              <Award size={22} />
-            </div>
-            <h3 className="text-base sm:text-lg font-semibold tracking-tight text-slate-900 dark:text-white mb-2">Academic Excellence</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Pioneering peer mentorship, preclinical resource sharing, exam preparation workshops, and ward readiness seminars designed to prepare students for national licensing and clinical practice.
-            </p>
-          </div>
-          <div className="mt-5 pt-3 border-t border-border/60 text-xs font-semibold text-[#D4AF37]">
-            Evidence-Based Medical Education
-          </div>
-        </div>
-
-        <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-[#121D33] border border-slate-200 dark:border-[#1E2D4D] transition-all duration-200 hover:border-[#D4AF37]/60 dark:hover:border-[#D4AF37]/50 hover:-translate-y-0.5 flex flex-col justify-between shadow-xs">
-          <div>
-            <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center mb-5">
-              <Shield size={22} />
-            </div>
-            <h3 className="text-base sm:text-lg font-semibold tracking-tight text-slate-900 dark:text-white mb-2">Student Welfare</h3>
-            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Safeguarding mental well-being, residential accommodation standards, anonymous grievance reporting, and financial solidarity initiatives across all study batches.
-            </p>
-          </div>
-          <div className="mt-5 pt-3 border-t border-border/60 text-xs font-semibold text-[#D4AF37]">
-            Compassionate Care for Caregivers
-          </div>
-        </div>
+          );
+        })}
       </section>
 
       {/* 3. Official Documents */}
@@ -177,7 +158,7 @@ export default function AboutPage() {
             Democratically Elected • Transparently Governed
           </h3>
           <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-6">
-            The Council operates under regular annual general assemblies where every medical batch from preclinical introductory terms through final clinical clerkships exercises voting franchise and direct oversight over all student welfare allocations.
+            The Council operates under regular annual general assemblies where students across every academic programme exercise voting franchise and direct oversight over student welfare initiatives.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm font-medium text-text-primary">
             <div className="flex items-center gap-2">
@@ -190,7 +171,7 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
-              <span>Dedicated Clinical Ward Transition Support</span>
+              <span>Dedicated Academic Transition Support</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 size={16} className="text-[#D4AF37] shrink-0" />
